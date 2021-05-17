@@ -25,7 +25,7 @@
 		path = module.parent.require('path'),
 		nconf = module.parent.require('nconf'),
 		winston = module.parent.require('winston'),
-		ssoConfig = require.main.require('sso-config'),
+		ssoConfig = require.main.require('./sso-config'),
 		async = module.parent.require('async');
 
 		var authenticationController = require.main.require('./src/controllers/authentication');
