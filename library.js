@@ -18,7 +18,7 @@
 
 		var User = require.main.require('./src/user'),
 		Groups = require.main.require('./src/groups'),
-		meta = require.main.require('./meta'),
+		meta = require.main.require('./src/meta'),
 		db = require.main.require('./src/database'),
 		passport = module.parent.require('passport'),
 		fs = module.parent.require('fs'),
