@@ -16,7 +16,7 @@
 		Step 4: If all goes well, you'll be able to login/register via your OAuth endpoint credentials.
 		*/
 
-		var User = require.main.require('./src/user');
+		var User = require.main.require('./src/user'),
 		Groups = require.main.require('./src/groups'),
 		meta = require.main.require('./meta'),
 		db = require.main.require('./src/database'),
