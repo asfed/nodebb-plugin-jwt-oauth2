@@ -17,9 +17,9 @@
 		*/
 
 		var User = require.main.require('./src/user');
-		Groups = module.parent.require('./src/groups'),
-		meta = module.parent.require('./meta'),
-		db = module.parent.require('../src/database'),
+		Groups = require.main.require('./src/groups'),
+		meta = require.main.require('./meta'),
+		db = require.main.require('./src/database'),
 		passport = module.parent.require('passport'),
 		fs = module.parent.require('fs'),
 		path = module.parent.require('path'),
@@ -28,7 +28,7 @@
 		ssoConfig = module.parent.require('../sso-config'),
 		async = module.parent.require('async');
 
-		var authenticationController = module.parent.require('./controllers/authentication');
+		var authenticationController = require.main.require('./src/controllers/authentication');
 
 		var constants = Object.freeze(ssoConfig.constants);
 		var configOk = false;
