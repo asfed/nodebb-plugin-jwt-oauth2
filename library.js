@@ -16,8 +16,8 @@
 		Step 4: If all goes well, you'll be able to login/register via your OAuth endpoint credentials.
 		*/
 
-		var User = module.parent.require('./user'),
-		Groups = module.parent.require('./groups'),
+		var User = require.main.require('./src/user');
+		Groups = module.parent.require('./src/groups'),
 		meta = module.parent.require('./meta'),
 		db = module.parent.require('../src/database'),
 		passport = module.parent.require('passport'),
