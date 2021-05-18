@@ -143,7 +143,7 @@
         // Everything else is optional.
 
         // Find out what is available by uncommenting this line:
-        // console.log(data);
+        console.log(data);
 
         var profileKeys = Object.keys(ssoConfig.profile);
         var profile = profileKeys.reduce(function(acc, key, i) {
@@ -167,7 +167,7 @@
         // Delete or comment out the next TWO (2) lines when you are ready to proceed
         // process.stdout.write('===\nAt this point, you\'ll need to customise the above section to id, displayName, and emails into the "profile" object.\n===');
         // return callback(new Error('Congrats! So far so good -- please see server log for details'));
-
+        console.log('parseUserReturn', profile);
         callback(null, profile);
     }
 
