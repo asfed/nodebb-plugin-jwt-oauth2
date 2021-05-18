@@ -1,0 +1,23 @@
+{
+    "constants": {
+        "type": "oauth2",
+        "name": "google",
+        "icon": "fa-google",
+        "oauth2": {
+            "authorizationURL": "https://accounts.google.com/o/oauth2/v2/auth",
+            "tokenURL": "https://www.googleapis.com/oauth2/v4/token",
+            "clientID": "",
+            "clientSecret": ""
+        },
+        "userRoute": "https://www.googleapis.com/oauth2/v3/userinfo",
+        "scope":"profile,email"
+    },
+    "profile": {
+        "id": "sub",
+        "displayName": "name",
+        "emails": "email"
+    },
+    "loginUrl": "login",
+    "registerUrl": "/register",
+    "tokenIdField": ""
+}
