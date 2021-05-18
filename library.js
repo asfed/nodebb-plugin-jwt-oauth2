@@ -86,15 +86,13 @@
                         if (err) {
                             return done(new InternalOAuthError('failed to fetch user profile', err));
                         }
-                        
-                        //console.log(body);
 
                         try {
                             var json = JSON.parse(body);
                             OAuth.parseUserReturn(json, function(err, profile) {
                                 if (err) return done(err);
                                 profile.provider = constants.name;
-                                console.log('profile', profile);
+                                
                                 done(null, profile);
                             });
                         } catch (e) {
@@ -143,7 +141,7 @@
         // Everything else is optional.
 
         // Find out what is available by uncommenting this line:
-        console.log(data);
+        //console.log(data);
 
         var profileKeys = Object.keys(ssoConfig.profile);
         var profile = profileKeys.reduce(function(acc, key, i) {
@@ -167,7 +165,7 @@
         // Delete or comment out the next TWO (2) lines when you are ready to proceed
         // process.stdout.write('===\nAt this point, you\'ll need to customise the above section to id, displayName, and emails into the "profile" object.\n===');
         // return callback(new Error('Congrats! So far so good -- please see server log for details'));
-        console.log('parseUserReturn', profile);
+        
         callback(null, profile);
     }
 
@@ -237,7 +235,7 @@
     };
 
     OAuth.getUidFromToken = function(token) {
-        console.log('token', token);
+        //not working
         const parts = token.split('.');
         const buffer = Buffer.from(parts[1], 'base64');
         const data = JSON.parse(buffer);
