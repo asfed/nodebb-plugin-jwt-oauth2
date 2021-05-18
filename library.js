@@ -87,14 +87,14 @@
                             return done(new InternalOAuthError('failed to fetch user profile', err));
                         }
                         
-                        console.log(body);
+                        //console.log(body);
 
                         try {
                             var json = JSON.parse(body);
                             OAuth.parseUserReturn(json, function(err, profile) {
                                 if (err) return done(err);
                                 profile.provider = constants.name;
-
+                                console.log('profile', profile);
                                 done(null, profile);
                             });
                         } catch (e) {
